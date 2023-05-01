@@ -1,0 +1,46 @@
+const vitor = {
+    nome: 'Vitor 3 Guerra',
+    idade: 25,
+
+    descrever: function(){
+        console.log(`Meu nome e ${this.nome} e minha idade é ${this.idade}`);
+        //console.log('Meu nome e ' + this.nome + ' e minha idade é '+ idade +'.');
+    }
+}
+
+class Pessoa {
+    nome;
+    idade;
+
+    descrever(){
+        console.log(`Meu nome e ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+
+const vPessoa = new Pessoa();
+vPessoa.nome = 'Pedro';
+vPessoa.idade = 40;
+
+vPessoa.descrever();
+
+class PessoaV2 {
+    nome;
+    idade;
+    anoNascimento;
+
+    constructor(pNome, pIdade){
+        this.nome = pNome;
+        this.idade = pIdade;
+        this.anoNascimento = (2023 - pIdade);
+    }
+
+   /* constructor(pNome, pAnoNascimento){
+        this.nome = pNome;
+        this.idade = 2023 - pAnoNascimento;
+        this.anoNascimento = pAnoNascimento;
+    }*/
+
+    descrever(){
+        console.log(`Meu nome e ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
